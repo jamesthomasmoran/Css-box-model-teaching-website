@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="css/border-examples.css"/>
+		
+		<title>Borders - CSS Box Model</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript" src="javascript/borders.js"></script>
+		<div class="navban">
+			<h1>CSS Box Model</h1>
+			<nav>
+				<ul class="navigation-bar">  
+					<li class="dropdown" >
+						<a href="borders.html" class="dropbtn">Borders</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="html/borders.html#borderStyle" onclick="document.getElementById('borderStyle').style.display='block'">Border Style</a>
+							<a class="navigation" href="html/borders.html#borderWidth" onclick="document.getElementById('borderWidth').style.display='block'" >Border Width</a>
+							<a class="navigation" href="html/borders.html#borderColor" onclick="document.getElementById('borderColor').style.display='block'">Border Color</a>
+							<a class="navigation" href="html/borders.html#borderRadius" onclick="document.getElementById('borderRadius').style.display='block'">Border Radius</a>
+						</div>
+					</li>
+ 
+					<li class="dropdown" >
+						<a href="padding-margins.html" class="dropbtn">Padding and Margins</a>
+						<div class="dropdown-content" >
+						  <a class="navigation" href="html/padding-margins.html#individualSides" onclick="document.getElementById('individualSides').style.display='block'">Individual Sides</a>
+						  <a class="navigation" href="html/padding-margins.html#shorthandProperty" onclick="document.getElementById('shorthandProperty').style.display='block'">Shorthand Property</a>
+						  <a class="navigation"  href="html/padding-margins.html#paddingWidth" onclick="document.getElementById('paddingWidth').style.display='block'">Padding and Element Width</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="positioning.html" class="dropbtn">Positioning</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="html/positioning.html#floats" onclick="document.getElementById('floats').style.display='block'">Floats</a>
+							<a class="navigation" href="html/positioning.html#position" onclick="document.getElementById('position').style.display='block'">Position Property</a>
+						</div>
+						</li>
+				</ul>
+			</nav>
+		</div>
+		<article class="main">
+			<h2 >The CSS Box Model</h2>
+			<section class="title">
+				<h3 class="center">The CSS box model is fundamental to layout in CSS.</h3>
+				<h3 class="center">Each element on the page is represented as a box which has unique properties.</h3>
+			</section>
+			<section>
+				<h3>Border</h3>
+			</section>
+			<section class="body" id="borderStyle">
+				<div  class="exampler">
+					<div class="out">
+						<div id="border-style-example">
+							<p id="dashed" class="examples">Dashed Border</p>
+							<p id="dotted" class="examples">Dotted Border</p>
+							<p id="double" class="examples">Double Border</p>
+							<p id="groove" class="examples">Groove Border</p>
+							<p id="hidden" class="examples">Hidden Border</p>
+							<p id="inset" class="examples">Inset Border</p>
+							<p id="none" class="examples">No Border</p>
+							<p id="outset" class="examples">Outset Border</p>
+							<p id="ridge" class="examples">Ridge Border</p>
+							<p id="solid" class="examples">Solid Border</p>
+							<p id="mix" class="examples">Mixed Border</p>
+						</div>
+					</div>
+					<div class="style-code-div">
+						<p class="class-name">.<span class="class">dashed</span>{	<span class="tab">/*Dashed Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:dashed;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">dotted</span>{	<span class="tab">/*Dotted Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:dotted;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">double</span>{	<span class="tab">/*Double Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:double;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">groove</span>{	<span class="tab">/*Groove Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:groove;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">hidden</span>{	<span class="tab">/*Hidden Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:hidden;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">inset</span>{	<span class="tab">/*Inset Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:inset;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">none</span>{	<span class="tab">/*None Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:none;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">outset</span>{	<span class="tab">/*Outset Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:outset;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">ridge</span>{	<span class="tab">/*Ridge Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:ridge;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">solid</span>{	<span class="tab">/*Solid Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">mixed</span>{	<span class="tab">/*Mixed Border Style*/</span></p>
+						<p class="code"><span class="property">border-style</span>:ridge none inset solid;</p>
+						<p class="code">}</p>
+					</div>					
+							
+				</div>
+				<h4 id="borderStle">Border Style</h4>
+				<p>Border style defines how the border appears on each element. The CSS property <b>border-style</b> allows us to define how the border appears.</p>
+				<p>Each one of the 4 borders of an element can be individually modified using the appropriate property.
+				The top borders style can be specified using the <b>border-top-style</b> property, with the right, bottom and left border requiring border to be followed by the relevant position on the box.</p>
+				<p>There are a variety of pre-defined Border styles that are allowed in CSS. These are:</p>
+					<ul>
+						<li class="body"><b>dashed</b></li>
+						<li class="body"><b>dotted</b></li>
+						<li class="body"><b>double</b></li>
+						<li class="body"><b>groove</b></li>
+						<li class="body"><b>hidden</b></li>
+						<li class="body"><b>inset</b></li>
+						<li class="body"><b>none</b></li>
+						<li class="body"><b>outset</b></li>
+						<li class="body"><b>ridge</b></li>
+						<li class="body"><b>solid</b></li>
+					</ul>
+				
+				<p> It is important to remember that the default value of <b>border-style</b> is 'none'. This means when styling a border, if the style is not set, no other properties will affect the output of the element.</p>
+			
+			<form class="questionForm" id="borderStyleQ">
+						
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto border width</b></h4>
+						<p class="formInput"><b>What property would you edit to change the style of an element's bottom border?</b>
+						<input  class="marginQ" id="topBorderStyleQ" name="topBorderStyleQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>Which value will set the top border to Dashed, bottom to Inset,left to Ridge and right to Solid?</b>
+						<select  class="marginQ" id="borderStyleMixedQ" name="MixedBorderStyleQ" size="17">	
+							<option >dashed,inset,ridge,solid</option>
+							<option >solid,inset,dashed,ridge</option>
+							<option >dashed,solid,ridge,inset</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Can you change other border properties if the border style is not set?</b>
+						<button class="formInput" id="borderStyleEnter" type="button" onclick=correctBorderStyle()><b>Enter</b></button>
+						<select  class="marginQOne" id="validStyleBorderQ" name="validBorderStyleQ" size="1">	
+							<option >Yes</option>
+							<option >No</option>
+						</select> 
+						</p>
+					</form>
+					
+			
+			</section>
+			<section class="body" id="borderWidth">
+			<div class="examplel">
+					<div class="out">
+						<div id="border-width-example">
+							<p id="pixel" class="examples">Pixel Border</p>
+							<p id="size" class="examples">Size Border</p>
+							<p id="mixed" class="examples">Mixed Width Border</p>
+		
+						</div>
+					</div>
+					<div class="width-code-div">
+						<p class="class-name">.<span class="class">pixel</span>{	<span class="tab">/*Border width using pixels*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-width</span>:<span id="pixelWidthCode">5px</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">size</span>{<span class="tab">/*Border width using sizes*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-width</span>:<span id="sizeWidthCode">thin</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">mixed</span>{<span class="tab">/*Border width using mixed values*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-width</span>:<span id="mixedWidthCode">1px 10px 5px 7px</span>;</p>
+						<p class="code">}</p>
+					</div>					
+							
+					<form class="form">
+						<b>Pixel:</b>
+						<input class="form" id="pixelWidth" name="pixel" value="5px" size="5">
+						
+						<b>Size:</b>
+						<select class="form" id="sizeWidth" name="width" size="1">	
+							<option value="thin">thin</option>
+							<option value="medium">medium</option>
+							<option value="thick">thick</option>
+						</select>
+						<b>Mixed:</b>
+						<input class="form" name="Mixed" id="mixedWidth" value="1px 10px 5px 7px" size="20">
+						<button class="buttonE" type="reset" onclick=resetBorderWidth() ><b>Reset</b></button>
+						<button class="buttonE" type="button" onclick=editBorderWidth()><b>Enter</b></button>
+					</form>
+				</div>
+				<h4>Border Width</h4>
+				<p>Border Width defines the breadth of each border. The CSS property <b>border-width</b> allows us to define the size of the border.</p>
+				<p>Each one of the 4 borders of an element can be individually modified using the appropriate property.
+				The top border’s width can be specified using the <b>border-top-width</b> property, with the right, bottom and left border requiring border to be followed by the relevant position on the box.</p>
+				<p>The border width can be set using a specific size using units such as px or em, but can also use three pre-defined sizes: thin, medium, or thick.</p> 
+			
+				<form class="questionForm" id="borderWidthQ">
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto border color</b></h4>
+						<p class="formInput"><b>What property would you edit to change the width of an element's top border?</b>
+						<input  class="marginQ" id="topBorderWidthQ" name="topBorderWidthQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>Which value will set the top border to 5px, bottom to 10px,left to 1px and right to 15px?</b>
+						<select   class="marginQ" id="borderWidthMixedQ" name="MixedWidthBorderQ" size="1">	
+							<option >5px,1px,10px,15px</option>
+							<option >5px,15px,10px,1px</option>
+							<option >15px,1px,10px,5px</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Which values are valid sizes of border width?</b>
+						<button class="formInput" id="borderWidthEnter" type="button" onclick=correctBorderWidth()><b>Enter</b></button>
+						<select  class="marginQOne" id="sizeBorderQ" name="sizeBorderQ" size="1">	
+							<option >thin,medium,thick</option>
+							<option >small,medium,large</option>
+							<option >thin,middle,thick</option>
+						</select> 
+						</p>
+					</form>	
+			</section>
+			<section class="body" id="borderColor">
+				<div  class="exampler">
+					<div class="out">
+						<div id="border-color-example">
+							<p id="name" class="examples">Name Color Border</p>
+							<p id="hex" class="examples">Hex Border</p>
+							<p id="rgb" class="examples">RGB Width Border</p>
+		
+						</div>
+					</div>
+					<div class="color-code-div">
+						<p class="class-name">.<span class="class">name</span>{	<span class="tab">/*Border color using name*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-color</span>:<span id="nameColorCode">blue</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">hex</span>{<span class="tab">/*Border width using Hexidecimal*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-color</span>:<span id="hexColorCode">#000000</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">rgb</span>{<span class="tab">/*Border width using RGB*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-color</span>:<span id="rgbColorCode">rgb(0,255,0)</span>;</p>
+						<p class="code">}</p>
+					</div>					
+							
+					<form class="form">
+						<b>Name:</b>
+						<input class="form" id="nameColor" name="color" value="blue" size="8">
+						<b>Hex:</b>
+						<input class="form" id="hexColor" name="hex" value="#000000" size="8">
+						<b>RGB:</b>
+						<input class="form" name="rgb" id="rgbColor" value="rgb(0,255,0)" size="20">
+							
+						<button class="buttonE" type="reset" onclick=resetBorderColor() ><b>Reset</b></button>
+						<button class="buttonE"  type="button" onclick=editBorderColor()><b>Enter</b></button>
+							
+					</form>
+				</div>
+				<h4>Border Color</h4>
+				<p>Border Color defines the colour of the border. The CSS property <b>border-color</b> sets the color of the border.</p>
+				<p>Each one of the 4 borders of an element can be individually modified using the appropriate property.
+				The top border’s color can be specified using the <b>border-top-width</b> property, with the right, bottom and left border requiring border to be followed by the relevant position on the box.</p>
+				<p>The Border colour can be defined using:</p>
+					<ul>
+						<li class="body">Name - Specify an accepted color name, for example 'blue'</li>
+						<li class="body">Hex -  Specify a hex value, for example #000000</li>
+						<li class="body">RGB – Specify a RGB value, for example rgb(255,255,255)</li>
+						<li class="body">Transparent</li>
+					</ul>
+				<p>If border color is not set then it inherits the color of its element.</p>
+				
+				<form class="questionForm" id="borderColorQ">
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto border radius</b></h4>
+						<p class="formInput"><b>What property would you edit to change the color of an element's left border?</b>
+						<input  class="marginQ" id="topBorderColorQ" name="topBorderColorQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>Which value is a valid hexadecimal value?</b>
+						<select   class="marginQ" id="hexBorderQ" name="hexBorderQ" size="1">	
+							<option >#AAA77A</option>
+							<option >#ZZZZZZ</option>
+							<option >ABCDEFG</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Which value is a valid RGB?</b>
+						<button class="formInput" id="borderColorEnter" type="button" onclick=correctBorderColor()><b>Enter</b></button>
+						<select  class="marginQOne" id="rgbBorderQ" name="rgbBorderQ" size="1">	
+							<option >rgb(3,34,54)</option>
+							<option >rgb(0,256,0)</option>
+							<option >rgb(-1,4,67)</option>
+						</select> 
+						</p>
+					</form>
+			
+			</section>
+			<section class="body" id="borderRadius">
+				<div  class="examplel">
+					<div class="out">
+						<div id="border-radius-example">
+							<p id="rounded" class="examples">Rounded Border</p>
+						</div>
+					</div>
+					<div class="radius-code-div">
+						<p class="class-name">.<span class="class">rounded</span>{<span class="tab">/*Border radius using pixels*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">border-radius</span>:<span id="radiusCode">15px</span>;</p>
+						<p class="code">}</p>
+					</div>					
+							
+					<form class="form">
+						<b>Radius:</b>
+						<input class="form" name="radius" id="radiusBorder" value="15px" size="15">
+						
+							
+						<button class="buttonE" type="reset" onclick=resetBorderRadius() ><b>Reset</b></button>
+						<button class="buttonE" type="button" onclick=editBorderRadius()><b>Enter</b></button>
+							
+					</form>
+				</div>
+				<h4>Border Radius</h4>
+				<p>Border Radius Defines how rounded the corners of a border are. CSS property <b>border-radius</b> sets the roundness of the Border.</p>
+				<p>This value must be applied to all sides of a border and can be set using ,any specific size unit.</p>
+			
+				<form class="questionForm" id="borderRadiusQu">
+						<h4 class="QIntro"><b>Answer these questions correctly</b></h4>
+						<p class="formInput"><b>What property would you edit to change the radius of an element?</b>
+						<input  class="marginQ" id="borderRadiusQ" name="borderRadiusQ" value="" size="17">
+						
+						</p>
+						
+						<p class="formInput"><b>Can you implement a border radius without a border style?</b>
+						<button class="formInput" id="borderRadiusEnter" type="button" onclick=correctBorderRadius()><b>Enter</b></button>
+						<select  class="marginQOne" id="validBorderRadiusQ" name="validBorderRadiusQ" size="1">	
+							<option >Yes</option>
+							<option >No</option>
+						</select> 
+						</p>	
+					</form>
+			</section>
+		</article>
+		<article class="footer">
+	<p class="foot">Content Sourced from w3schools.com<p>
+	</article>
+	</body>
+	</html>

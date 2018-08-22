@@ -1,0 +1,39 @@
+	p.examples{								/*Sets example values formatting*/
+		font-family:"Open Sans",sans-serif;
+		margin-top:15px;
+		width:30%;
+		margin-left:auto;
+		margin-right:auto;
+		
+		
+	}
+	
+	#floated.examples{						/*Styles a floated object*/ 
+	border-style: solid;
+	float:none;
+	clear:none;
+	}	
+	#static.examples{						/*Gives element static position*/
+		border-style:solid;
+		position:static;
+	}
+	#relative.examples{						/*Gives element relative position*/
+		border-style:solid;
+		position:relative;
+	}
+	#fixed.examples{							/*Gives element fixed position*/
+		border-style:solid;
+		position:fixed;
+	}
+	#absolute.examples{						/*Gives element absolute position*/
+		border-style:solid;
+		position:absolute;
+	}
+	#sticky.examples{						/*Gives element sticky position*/
+		border-style:solid;
+		position:sticky;
+	}
+	
+	
+
+

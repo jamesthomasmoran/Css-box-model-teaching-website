@@ -1,0 +1,90 @@
+	p.examples{								/*Sets example values formatting*/
+		font-family:"Open Sans",sans-serif;
+		margin-top:15px;
+		width:30%;
+		margin-left:auto;
+		margin-right:auto;
+		
+		
+	}
+	
+	#dashed.examples{						/*Styles a dashed Border*/ 
+	border-style: dashed;
+	}	
+	
+	#dotted.examples{						/*Styles a dotted Border*/
+	border-style: dotted;
+	}	
+	
+	#double.examples{ 						/*Styles a double Border*/
+	border-style: double;
+	}	
+	
+	#groove.examples{						/*Styles a groove Border*/ 
+	border-style: groove;
+	}	
+	
+	#hidden.examples{						/*Styles a hidden Border*/ 
+	border-style: hidden;
+	}	
+	
+	#inset.examples{						/*Styles a inset Border*/ 
+	border-style: inset;
+	}		
+	
+	#none.examples{							/*Styles a none Border*/ 
+	border-style: none;
+	}
+	
+	#outset.examples{						/*Styles a outset Border*/ 
+	border-style: outset;
+	}	
+	
+	#ridge.examples{						/*Styles a ridge Border*/ 
+	border-style: ridge;
+	}		
+	
+	#solid.examples{						/*Styles a solid Border*/ 
+	border-style: solid;
+	}		
+	
+	#mix.examples{ 
+	border-style: ridge none inset solid;	/*Styles a mixed Border*/	
+	}
+	
+	#pixel.examples{							/*Border width set to 5px*/
+	position: relative;
+	margin-top: 10px;
+	border-style: solid;
+	border-width: 5px;
+	}
+	
+	#size.examples{							/*Border width set to thin*/
+	border-style: solid;
+	border-width: thin;
+	}
+	
+	#mixed.examples{							/*Border width with mixed values*/
+	border-style: solid;
+	border-width: 1px 10px 5px 7px;
+	}
+	
+	#name.examples{							/*Blue Border*/	
+	border-style: solid;
+	border-color: blue;
+	}
+	
+	#hex.examples{							/*Black Border using hex*/
+	border-style: solid;
+	border-color: #000000;
+	}
+	
+	#rgb.examples{							/*Green Border using RGB*/
+	border-style: solid;
+	border-color: rgb(0,255,0);
+	}
+	
+	#rounded.examples{				/*Border with rounded edges*/
+	border-style: solid;
+	border-radius: 10px;
+}

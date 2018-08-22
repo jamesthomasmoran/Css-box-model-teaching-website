@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/positioning-examples.css"/>
+		
+		<title>Positioning - CSS Box Model</title>
+		
+	</head>
+	<body>
+	<script type="text/javascript" src="../javascript/positioning.js"></script>
+		<div class="navban">
+			<h1>CSS Box Model</h1>
+			<nav>
+				<ul class="navigation-bar">  
+					<li class="dropdown" >
+						<a href="borders.html" class="dropbtn">Borders</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="borders.html#borderStyle" onclick="document.getElementById('borderStyle').style.display='block'">Border Style</a>
+							<a class="navigation" href="borders.html#borderWidth" onclick="document.getElementById('borderWidth').style.display='block'" >Border Width</a>
+							<a class="navigation" href="borders.html#borderColor" onclick="document.getElementById('borderColor').style.display='block'">Border Color</a>
+							<a class="navigation" href="borders.html#borderRadius" onclick="document.getElementById('borderRadius').style.display='block'">Border Radius</a>
+						</div>
+					</li>
+ 
+					<li class="dropdown" >
+						<a href="padding-margins.html" class="dropbtn">Padding and Margins</a>
+						<div class="dropdown-content" >
+						  <a class="navigation" href="padding-margins.html#individualSides" onclick="document.getElementById('individualSides').style.display='block'">Individual Sides</a>
+						  <a class="navigation" href="padding-margins.html#shorthandProperty" onclick="document.getElementById('shorthandProperty').style.display='block'">Shorthand Property</a>
+						  <a class="navigation"  href="padding-margins.html#paddingWidth" onclick="document.getElementById('paddingWidth').style.display='block'">Padding and Element Width</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="positioning.html" class="dropbtn">Positioning</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="positioning.html#floats" onclick="document.getElementById('floats').style.display='block'">Floats</a>
+							<a class="navigation" href="positioning.html#position" onclick="document.getElementById('position').style.display='block'">Position Property</a>
+						</div>
+						</li>
+				</ul>
+			</nav>
+		</div>
+		<article class="main">
+			<h2 >The CSS Box Model</h2>
+			<section class="title">
+				<h3 class="center">The CSS box model is fundamental to layout in CSS.</h3>
+				<h3 class="center">Each element on the page is represented as a box which has unique properties.</h3>
+			</section>
+			<section>
+				<h3>Positioning</h3>
+			</section>
+			<section class="body" id="floats">
+				<div  class="exampler">
+					<div class="out">
+						<div id="float-example">
+							<p class="examples">Border style defines how the border appears on each element. The CSS property <b>border-style</b> allows us to define how the border appears.</p>
+							<p id="floated" class="examples">Floated element</p>
+							
+							
+						</div>
+					</div>
+					<div class="style-code-div">
+						<p class="class-name">.<span class="class">floated</span>{	<span class="tab">/*styles a floated border*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">float</span>:<span id="floatCode">none</span>;</p>
+						<p class="code"><span class="property">clear</span>:<span id="clearCode">none</span>;</p>
+						<p class="code">}</p>
+						
+					</div>					
+						<form class="form">
+						<b>Float:</b>
+						<input class="form" id="float" name="float" value="none" size="8">
+						<b>Clear:</b>
+						<input class="form" id="clear" name="clear" value="none" size="8">
+						<button class="buttonE"  type="reset" onclick=resetFloat()><b>Reset</b></button>
+						<button class="buttonE"  type="button" onclick=editFloat()><b>Enter</b></button>
+					</form>	
+				</div>
+				<h4>Floats</h4>
+				<p>The <b>float</b> property is used for positioning and layout.One of its most common uses is to wrap text around an element.</p>
+				<p>The <b>float</b> property has 4 possible values:</p>
+				<ul>
+					<li class="body"><b>left</b> - element floated to left of container</li>
+					<li class="body"><b>right</b> - element floated to right of container</li>
+					<li class="body"><b>none</b> - element displayed where it is defined in text</li>
+					<li class="body"><b>inherit</b> - element inherits from parent element</li>	
+				</ul>
+				
+				<p>The <b>clear</b> property defines if elements can float beside the cleared element. <b>clear</b> has 5 possible values:</p>
+				<ul>
+					<li class="body"><b>left</b> - elements can't be floated on left side</li>
+					<li class="body"><b>right</b> - elements can't be floated on right side</li>
+					<li class="body"><b>none</b> - floats allowed on both sides</li>
+					<li class="body"><b>inherit</b> - element inherits from parent element</li>
+					<li class="body"><b>both</b> - no floating elements allowed alongside</li>
+						
+				</ul>
+			<form class="questionForm" id="borderStyleQ">
+						
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto position property</b></h4>
+						<p class="formInput"><b>Which value would you enter to float an element to the left?</b>
+						<input  class="marginQ" id="leftFloatQ" name="leftFloatQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>If you set the property 'clear:both', On which side will there be floating elements?</b>
+						<select  class="marginQ" id="bothQ" name="bothQ" size="1">	
+							<option >left</option>
+							<option >right</option>
+							<option >neither</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>If you set the property 'clear:left', On which side will there be floating elements?</b>
+						<button class="formInput" id="floatEnter" type="button" onclick=correctFloat()><b>Enter</b></button>
+						<select  class="marginQOne" id="leftQ" name="leftQ" size="1">	
+							<option >left</option>
+							<option >right</option>
+							<option >neither</option>
+						</select> 
+						</p>
+					</form>
+					
+			
+			</section>
+			<section class="body" id="position">
+			<div class="examplel">
+					<div class="out">
+						<div id="position-property-example">
+							<p id="static" class="examples">Static Position</p>
+							<p id="relative" class="examples">Relative Position</p>
+							<p id="fixed" class="examples">Fixed Position</p>
+							<p id="absolute" class="examples">Absolute Position</p>
+							<p id="sticky" class="examples">Sticky position</p>
+							
+		
+						</div>
+					</div>
+					<div class="width-code-div">
+						<p class="class-name">.<span class="class">static</span>{	<span class="tab">/*position set to static*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">position</span>:<span id="staticCode">static</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">relative</span>{<span class="tab">/*position set to relative*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">position</span>:<span id="relativeCode">relative</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">fixed</span>{<span class="tab">/*position set to fixed*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">position</span>:<span id="fixedCode">fixed</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">absolute</span>{<span class="tab">/*position set to absolute*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">position</span>:<span id="absoluteCode">absolute</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">sticky</span>{<span class="tab">/*position set to sticky*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">position</span>:<span id="stickyCode">sticky</span>;</p>
+						<p class="code">}</p>
+					</div>					
+				</div>
+				<h4>Position Property</h4>
+				<p>The <b>position</b> property defines how an element will be positioned. The property has a top,right,bottom and left property for defining specific positioning.It has 5 possible values which determine how elements position is influennced by other elements.These are:</p>
+				
+				<ul>
+					<li class="body"><b>static</b> - element not impacted by side properties</li>
+					<li class="body"><b>relative</b> - element impacted by side properties</li>
+					<li class="body"><b>fixed</b> - When screen is scrolled, element position fixed in window</li>
+					<li class="body"><b>absolute</b> - positioned relative to neareat ancestor</li>
+					<li class="body"><b>sticky</b> - Dependant on user scroll position</li>	
+				</ul>
+				<form class="questionForm" id="positionPropertyQ">
+						<h4 class="QIntro"><b>Answer these questions correctly</b></h4>
+						
+						<p class="formInput"><b>Which property value will allow element to scroll with the window?</b>
+						<select   class="marginQ" id="fixedQ" name="fixedQ" size="1">	
+							<option >static</option>
+							<option >relative</option>
+							<option >fixed</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Which position value is not impacted by other elements?</b>
+						<button class="buttonE" id="positionEnter" type="button" onclick=correctPositionProperty()><b>Enter</b></button>
+						<select  class="marginQOne" id="staticQ" name="staticQ" size="1">	
+							<option >absolute</option>
+							<option >static</option>
+							<option >relative</option>
+						</select> 
+						</p>
+					</form>	
+			</section>
+		</article>
+		<article class="footer">
+	<p class="foot">Content Sourced from w3schools.com<p>
+	</article>
+	</body>
+	</html>

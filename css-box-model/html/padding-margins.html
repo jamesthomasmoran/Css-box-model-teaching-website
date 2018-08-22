@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/padding-margins-examples.css"/>
+		
+		<title>Padding and Margins - CSS Box Model</title>
+		
+	</head>
+	<body>
+	<script type="text/javascript" src="../javascript/padding.js"></script>
+		<div class="navban">
+			<h1>CSS Box Model</h1>
+			<nav>
+				<ul class="navigation-bar">  
+					<li class="dropdown" >
+						<a href="borders.html" class="dropbtn">Borders</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="borders.html#borderStyle" onclick="document.getElementById('borderStyle').style.display='block'">Border Style</a>
+							<a class="navigation" href="borders.html#borderWidth" onclick="document.getElementById('borderWidth').style.display='block'" >Border Width</a>
+							<a class="navigation" href="borders.html#borderColor" onclick="document.getElementById('borderColor').style.display='block'">Border Color</a>
+							<a class="navigation" href="borders.html#borderRadius" onclick="document.getElementById('borderRadius').style.display='block'">Border Radius</a>
+						</div>
+					</li>
+ 
+					<li class="dropdown" >
+						<a href="padding-margins.html" class="dropbtn">Padding and Margins</a>
+						<div class="dropdown-content" >
+						  <a class="navigation" href="padding-margins.html#individualSides" onclick="document.getElementById('individualSides').style.display='block'">Individual Sides</a>
+						  <a class="navigation" href="padding-margins.html#shorthandProperty" onclick="document.getElementById('shorthandProperty').style.display='block'">Shorthand Property</a>
+						  <a class="navigation"  href="padding-margins.html#paddingWidth" onclick="document.getElementById('paddingWidth').style.display='block'">Padding and Element Width</a>
+						</div>
+					</li>
+					<li class="dropdown" >
+						<a href="positioning.html" class="dropbtn">Positioning</a>
+						<div class="dropdown-content" >
+							<a class="navigation" href="positioning.html#floats" onclick="document.getElementById('floats').style.display='block'">Floats</a>
+							<a class="navigation" href="positioning.html#position" onclick="document.getElementById('position').style.display='block'">Position Property</a>
+						</div>
+						</li>
+				</ul>
+			</nav>
+		</div>
+		<article class="main">
+			<h2 >The CSS Box Model</h2>
+			<section class="title">
+				<h3 class="center">The CSS box model is fundamental to layout in CSS.</h3>
+				<h3 class="center">Each element on the page is represented as a box which has unique properties.</h3>
+			</section>
+			<section>
+				<h3>Padding and Margins</h3>
+			</section>
+			<section class="body" id="individualSides">
+				<div  class="exampler">
+					<div class="out">
+						<div id="individual-sides-example">
+							<p id="padding" class="examples">Padding Changes</p>
+							<p id="margins" class="examples">Margins Change</p>
+						</div>
+					</div>
+					<div class="individual-sides-output-div">
+						<p class="class-name">.<span class="class">padding</span>{	<span class="tab">/*Element with editable padding*/ </span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">padding-top</span>:<span id="paddingTopCode">5px</span>;</p>
+						<p class="code"><span class="property">padding-right</span>:<span id="paddingRightCode">5px</span>;</p>
+						<p class="code"><span class="property">padding-bottom</span>:<span id="paddingBottomCode">5px</span>;</p>
+						<p class="code"><span class="property">padding-left</span>:<span id="paddingLeftCode">5px</span>;</p>
+						<p class="code">}</p>
+						
+						<p class="class-name">.<span class="class">margin</span>{	<span class="tab">/*Element with editable margins*/ </span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">margin-top</span>:<span id="marginTopCode">5px</span>;</p>
+						<p class="code"><span class="property">margin-right</span>:<span id="marginRightCode">5px</span>;</p>
+						<p class="code"><span class="property">margin-bottom</span>:<span id="marginBottomCode">5px</span>;</p>
+						<p class="code"><span class="property">margin-left</span>:<span id="marginLeftCode">5px</span>;</p>
+						<p class="code">}</p>
+						
+						
+					</div>					
+					<form class="form">
+						<b>Top:</b>
+						<input class="form" id="paddingTop" name="paddingTop" value="5px" size="5">
+						<b>Right:</b>
+						<input class="form" id="paddingRight" name="paddingRight" value="5px" size="5">
+						<b>Bottom:</b>
+						<input class="form" id="paddingBottom" name="paddingBottom" value="5px" size="5">
+						<b>Left:</b>
+						<input class="form" id="paddingLeft" name="paddingRight" value="5px" size="5">
+						<button class="buttonE" type="reset" onclick=resetIndividualSides() ><b>Reset</b></button>
+						<button class="buttonE" type="button" onclick=editIndividualSides()><b>Enter</b></button>
+					
+					</form>	
+				</div>
+				<h4>Individual Sides</h4>
+				<p>Padding relates to the space generated within the set border of an element. The padding property can be defined for each individual side of an element. This is done by following the keyword <b>padding</b> with one of the positional values. An example of this is <b>padding-right</b>.</p>
+				<p>The padding property can be altered using one of three properties:</p>
+				<ul>
+					<li class="body"><b>length</b> - defined using units such as px or cm.</li>
+					<li class="body"><b>%</b> - defined using the percentage of the width of the container</li>
+					<li class="body"><b>inherit</b> - padding is inherited from parent element</li>
+				</ul>	
+				<p> It is worth noting that padding cannot be set to a negative value.<p>
+				
+				<p>Margins relate to the space generated around the outside of the set border of an element. THe padding property can be defined for each individual side of an element. This is done by following the keyword <b>margin</b> with one of the positional values. An example of this is <b>margin-left</b>.</p>
+				<p>The padding property can be altered using the same 3 properties as padding aswell as with the value 'auto'.</p>
+				<p>The auto value causes the browser to determine the margin. The browser will set the margin so that the element is positioned centrally within its container.</p>
+				<p> It is worth noting that unlike padding, margins can be set to a negative value.<p>
+			
+			<form class="questionForm" id="individualSidesQ">
+						
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto the shorthand property</b></h4>
+						<p class="formInput"><b>What property would you edit to change the top padding of an element?</b>
+						<input  class="marginQ" id="topPaddingQ" name="topPaddingQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>Which value is valid for Margin but not for Padding?</b>
+						<select  class="marginQ" id="extraMarginQ" name="extraMarginQQ" size="1">	
+							<option >length</option>
+							<option >auto</option>
+							<option >%</option>
+							<option >inherit</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Which property is allowed a negative value?</b>
+						<button class="formInput" id="individualSidesEnter" type="button" onclick=correctIndividualSides()><b>Enter</b></button>
+						<select  class="marginQOne" id="negativeMarginQ" name="negativeMarginQ" size="1">	
+							<option >margin</option>
+							<option >padding</option>
+						</select> 
+						</p>
+					</form>
+					
+			
+			</section>
+			<section class="body" id="shorthandProperty">
+			<div class="examplel">
+					<div class="out">
+						<div id="shorthand-property-example">
+							<p id="shorthand" class="examples">Shorthand</p>
+							<p id="comparison" class="examples">Comparison</p>
+							
+		
+						</div>
+					</div>
+					<div class="shorthand-property-div">
+						<p class="class-name">.<span class="class">shorthand</span>{	<span class="tab">/*element with editable margins and padding*/ </span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">padding</span>:<span id="shorthandPaddingCode">5px 10px 15px 20px</span>;</p>
+						<p class="code"><span class="property">margin</span>:<span id="shorthandMarginCode">5px 10px 15px 20px</span>;</p>
+						<p class="code">}</p>
+						<p class="class-name">.<span class="class">comparison</span>{<span class="tab">/*element to compare to shorthand*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code">}</p>
+						
+					</div>					
+							
+					<form class="form">
+						<b>Padding:</b>
+						<input class="form" id="shorthandPadding" name="shorthandPadding" value="5px 10px 15px 20px" size="20">
+						<b>Margin:</b>
+						<input class="form" name="shorthandMargin" id="shorthandMargin" value="5px 10px 15px 20px" size="20">
+						<button class="buttonE" type="reset" onclick=resetShorthandProperty() ><b>Reset</b></button>
+						<button class="buttonE" type="button" onclick=editShorthandProperty()><b>Enter</b></button>
+					</form>
+				</div>
+				<h4>Shorthand Property</h4>
+				<p>The <b>margin</b> property encompasses all 4 side properties into one instruction. The <b>padding</b> property does the same for the 4 padding sides.</p>
+				<p>This works by the <b>top</b> property being entered first followed by the <b>right</b> property and then the <b>bottom</b> and <b>left</b> property. An example of this would be: <b>12px 5px 20px 10px</b>.</p>
+				<p>This cn be shortened further if 2 oposite sides have the same value. For example, if the left margin equalled 10px and so did the right margin we could enter <b>12px 10px 20px</b>.
+				<form class="questionForm" id="shorthandPropertyQ">
+						<h4 class="QIntro"><b>Answer these questions correctly to move onto Padding and Element Width</b></h4>
+						<p class="formInput"><b>Which sub property value is entered first in the short hand margin property?</b>
+						<input  class="marginQ" id="shortFirstQ" name="shortFirstQ" value="" size="17">
+						</p>
+						
+						<p class="formInput"><b>Which Value is valid for the shorthand margin property?</b>
+						<select   class="marginQ" id="validShortQ" name="validShortQ" size="1">	
+							<option >5px 1px 10px 15sd</option>
+							<option >5px 15px 10px 1px 1px</option>
+							<option >15px 1px 10px 5px</option>
+						</select>
+						</p>
+						
+						<p class="formInput"><b>Which Value is the most effiecient way to set all side margins to 10px?</b>
+						<button class="formInput" id="shorthandPropertyEnter" type="button" onclick=correctShorthandProperty()><b>Enter</b></button>
+						<select  class="marginQOne" id="efficientMarginQ" name="efficientMarginQ" size="1">	
+							<option >10px</option>
+							<option >10px 10px</option>
+							<option >10px 10px 10px 10px</option>
+						</select> 
+						</p>
+					</form>	
+			</section>
+			<section class="body" id="paddingWidth">
+				<div  class="exampler">
+					<div class="out">
+						<div id="border-color-example">
+							<p id="boxSize" class="examples">Box Sizing</p>
+							
+		
+						</div>
+					</div>
+					<div class="color-code-div">
+						<p class="class-name">.<span class="class">boxSize</span>{	<span class="tab">/*Element implements box-sizing*/</span></p>
+						<p class="code"><span class="property">border-style</span>:solid;</p>
+						<p class="code"><span class="property">width</span>:<span id="boxWidthCode">350px</span>;</p>
+						<p class="code"><span class="property">box-sizing</span>:<span id="boxSizingCode">border-box</span>;</p>
+						<p class="code"><span class="property">padding</span>:<span id="boxPaddingCode">20px</span>;</p>
+						<p class="code">}</p>
+						
+					</div>					
+							
+					<form class="form">
+						<b>Width:</b>
+						<input class="form" id="boxWidth" name="boxWidth" value="350px" size="8">
+						<b>Box-Sizing:</b>
+						<select   class="form" id="boxSizing" name="boxSizing" size="1">	
+							<option >border-box</option>
+							<option >content-box</option>
+						</select>
+							
+						<button class="buttonE" type="reset" onclick=resetpaddingWidth() ><b>Reset</b></button>
+						<button class="buttonE"  type="button" onclick=editpaddingWidth()><b>Enter</b></button>
+							
+					</form>
+				</div>
+				<h4>Padding and Element Width</h4>
+				<p>The <b>width</b> of an element specifies the width inside the content area. This is inside of padding, borders and margins. This means that if an elements width is set to 150px, and <b>padding-left</b> is set to 20px, the displayed size will be 170px.</p>
+				<p>If this is not the desired output, the <b>box-sizing</b> property can be used. Using the value 'border-box', <b>box-sizing</b> sets the displayed width to the value set in the <b>width</b> property of an element</p>
+				
+				<form class="questionForm" id="paddingWidthQ">
+						<h4 class="QIntro"><b>Answer these questions correctly</b></h4>
+						<p class="formInput"><b>What property would you edit to ensure width was set to the value set in the width property?</b>
+						<input  class="marginQ" id="borderSizingQ" name="borderSizingQ" value="" size="17">
+						</p>
+						
+						
+						<p class="formInput"><b>Which value sets width to the defined size?</b>
+						<button class="form"  id="paddingWidthEnter" type="button" onclick=correctPaddingWidth()><b>Enter</b></button>
+						<select  class="marginQOne" id="valueWidthQ" name="valueWidthQ" size="1">	
+							<option >border-box</option>
+							<option >box-border</option>
+							<option >padding-box</option>
+						</select> 
+						</p>
+					</form>
+			
+			</section>
+		</article>
+		<article class="footer">
+			<p class="foot">Content Sourced from w3schools.com<p>
+		</article>
+	</body>
+</html>
